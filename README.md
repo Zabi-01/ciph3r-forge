@@ -39,10 +39,9 @@ Encrypt, decrypt, crack, and visualize — a full-stack cryptography workbench f
 
 ## About
 
-**Ciph3r Forge** is a browser-based cryptanalysis toolkit — cipher tools, hash cracking, RSA/ECC/Diffie-Hellman visualizers, and CTF challenges in a dark, terminal-inspired UI.
+**Ciph3r Forge** is a browser-based cryptanalysis toolkit — cipher tools, hash cracking, and RSA/ECC/Diffie-Hellman visualizers in a dark, terminal-inspired UI.
 
-> ⚡ **100% vibe-coded — built entirely through the power of prompting.**
-> This project was created without writing a single line of traditional code by hand. Every component, every page, every backend function was prompt-engineered on **[Base44](https://base44.com)** — proving that with the right prompts, you can ship production-grade apps from idea to deployment. Base44 powers the entire backend: auth, the entity database, serverless functions, and the AI model behind the in-app assistant.
+> ⚡ Fully vibe-coded on **[Base44](https://base44.com)** — prompt-engineered from concept to production. Base44 powers the backend: auth, database, serverless functions, and the in-app AI assistant.
 
 ## Features
 
