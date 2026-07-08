@@ -1,0 +1,63 @@
+{
+  "name": "UserChatLimit",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date (YYYY-MM-DD)"
+    },
+    "chat_duration_seconds": {
+      "type": "integer",
+      "default": 0,
+      "description": "Total chat time in seconds today"
+    },
+    "last_activity": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last chat activity timestamp"
+    }
+  },
+  "required": [
+    "user_email",
+    "date"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

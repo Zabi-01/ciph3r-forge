@@ -1,0 +1,68 @@
+{
+  "name": "UserActivityLog",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user"
+    },
+    "module": {
+      "type": "string",
+      "description": "Module/tool used (e.g., Hashing, Analysis, Chat)"
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation performed"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the operation was performed"
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional details about the operation"
+    },
+    "page_path": {
+      "type": "string",
+      "description": "Page/route where the action occurred"
+    },
+    "recipe_name": {
+      "type": "string",
+      "description": "Name of the recipe/pipeline executed"
+    }
+  },
+  "required": [
+    "user_email",
+    "module",
+    "operation",
+    "timestamp"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

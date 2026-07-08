@@ -1,0 +1,105 @@
+{
+  "name": "CTFChallenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Challenge title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Challenge description and story"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cryptography",
+        "web",
+        "pwn",
+        "reverse",
+        "forensics",
+        "misc"
+      ],
+      "description": "Challenge category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "easy",
+        "medium",
+        "hard",
+        "insane"
+      ],
+      "description": "Challenge difficulty level"
+    },
+    "points": {
+      "type": "integer",
+      "default": 100,
+      "description": "Points awarded for solving"
+    },
+    "flag": {
+      "type": "string",
+      "description": "The correct flag (format: CTF{...})"
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "penalty": {
+            "type": "integer",
+            "default": 0
+          }
+        }
+      },
+      "description": "Array of hints with optional point penalties"
+    },
+    "attachment_url": {
+      "type": "string",
+      "description": "URL to challenge files/attachments"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the challenge is currently active"
+    },
+    "solve_count": {
+      "type": "integer",
+      "default": 0,
+      "description": "Number of users who solved this challenge"
+    },
+    "author": {
+      "type": "string",
+      "description": "Challenge author name"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "difficulty",
+    "points",
+    "flag"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

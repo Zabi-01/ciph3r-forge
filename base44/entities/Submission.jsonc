@@ -1,0 +1,78 @@
+{
+  "name": "Submission",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of submitting user"
+    },
+    "challenge_id": {
+      "type": "string",
+      "description": "ID of the challenge"
+    },
+    "submitted_flag": {
+      "type": "string",
+      "description": "The flag submitted by user"
+    },
+    "is_correct": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the flag was correct"
+    },
+    "attempt_number": {
+      "type": "integer",
+      "description": "Which attempt number this is"
+    },
+    "submitted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Submission timestamp"
+    }
+  },
+  "required": [
+    "user_email",
+    "challenge_id",
+    "submitted_flag"
+  ],
+  "rls": {
+    "create": {
+      "data.user_email": "{{user.email}}"
+    },
+    "read": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "data.user_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}
