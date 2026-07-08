@@ -20,11 +20,16 @@
 
 Encrypt, decrypt, crack, and visualize — a full-stack cryptography workbench for classical ciphers, modern hashing, RSA/ECC/Diffie-Hellman, and post-quantum concepts.
 
+[![Live Demo](https://img.shields.io/badge/🔴_Live_Demo-ciph3r--forge-FF4444?style=for-the-badge)](https://ciph3r-forge.base44.app/)
+
 [![Made with React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Built on Base44](https://img.shields.io/badge/Backend-Base44-00FFA3)](https://base44.com)
+[![Vibe-Coded](https://img.shields.io/badge/⚡_Vibe--Coded-Prompt_Engineered-blueviolet)](https://base44.com)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](#license)
+
+**[🚀 Try it live → ciph3r-forge.base44.app](https://ciph3r-forge.base44.app/)**
 
 </div>
 
@@ -34,7 +39,10 @@ Encrypt, decrypt, crack, and visualize — a full-stack cryptography workbench f
 
 ## About
 
-**Ciph3r Forge** is a browser-based cryptanalysis toolkit — cipher tools, hash cracking, RSA/ECC/Diffie-Hellman visualizers, and CTF challenges in a dark, terminal-inspired UI. Fully **"vibe-coded" on [Base44](https://base44.com)**, which powers the entire backend: auth, the entity database, and the AI model behind the in-app assistant.
+**Ciph3r Forge** is a browser-based cryptanalysis toolkit — cipher tools, hash cracking, RSA/ECC/Diffie-Hellman visualizers, and CTF challenges in a dark, terminal-inspired UI.
+
+> ⚡ **100% vibe-coded — built entirely through the power of prompting.**
+> This project was created without writing a single line of traditional code by hand. Every component, every page, every backend function was prompt-engineered on **[Base44](https://base44.com)** — proving that with the right prompts, you can ship production-grade apps from idea to deployment. Base44 powers the entire backend: auth, the entity database, serverless functions, and the AI model behind the in-app assistant.
 
 ## Features
 
@@ -139,5 +147,5 @@ MIT — see [LICENSE](LICENSE) for details.
 ---
 
 <div align="center">
-<sub>Built with 🧠 + Base44 · No plaintext left behind.</sub>
+<sub>Built with 🧠 + the power of prompting on Base44 · No plaintext left behind.</sub>
 </div>
