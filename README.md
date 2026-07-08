@@ -16,7 +16,7 @@
 
 <div align="center">
 
-### Advanced Cryptographic Toolkit & CTF Playground
+### Advanced Cryptographic Toolkit
 
 Encrypt, decrypt, crack, and visualize — a full-stack cryptography workbench for classical ciphers, modern hashing, RSA/ECC/Diffie-Hellman, and post-quantum concepts.
 
@@ -35,7 +35,7 @@ Encrypt, decrypt, crack, and visualize — a full-stack cryptography workbench f
 
 ---
 
-![Landing Page](docs/screenshots/landing.png)
+![Landing Page](docs/screenshots/landing1.png)
 
 ## About
 
